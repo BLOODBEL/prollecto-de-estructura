@@ -28,8 +28,7 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
     private ListaDobleEnlazada<Road> rightRoad = new ListaDobleEnlazada();
     private Queue<Character> characterList = new Queue();    
     private Bot logicCpu = new Bot();
-    private Taller player = new Taller();
-    private Taller cpu = new Taller();
+
     private int partidaNum = 1;
     private int charactersPerRound;
     private int charactersLeft;
@@ -107,21 +106,7 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
         this.logicCpu = logicCpu;
     }
 
-    public Taller getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Taller player) {
-        this.player = player;
-    }
-
-    public Taller getCpu() {
-        return cpu;
-    }
-
-    public void setCpu(Taller cpu) {
-        this.cpu = cpu;
-    }
+    
 
     public int getPartidaNum() {
         return partidaNum;
@@ -870,14 +855,11 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
         timer.setInitialDelay(0);
         timer.start();
     }
+    
+    
 
     
-    public void updateHitPointsBar(Taller barra, JProgressBar bar) {
-        int life = (int) Math.ceil(barra.getLife());
-        bar.setValue(life);
-    }
-    
-    public void turn() {
+public void turn() {
         if (charactersLeft == 0) {
             Partida round = new Partida(this);
             round.start();
@@ -887,11 +869,7 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
         JListPiezas.setEnabled(true);
     }
     
-    public void moveCharacters() {
-        MoveCpu moveCpu = new MoveCpu(leftRoad, rightRoad, player, this, JugadorDinero, logicCpu);
-        MovePlayer movePlayer = new MovePlayer(leftRoad, rightRoad, cpu, this, logicCpu, moveCpu);
-        movePlayer.start();
-    }
+    
     
     public void showNewRound() {
         charactersPerRound = partidaNum + 4;

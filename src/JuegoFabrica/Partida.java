@@ -5,7 +5,6 @@ import javax.swing.JFrame;
 public class Partida extends Thread {
     
     private Inicio principalScreen; 
-    private Turn turn;
     
     private PlaySound playSound = new PlaySound();
 
@@ -26,11 +25,9 @@ public class Partida extends Thread {
         
         principalScreen.dontShowNewRound();    
         
-        turn.run();
     }
     
     public Partida(Inicio principalScreen){
         this.principalScreen = principalScreen;
-        this.turn = new Turn(principalScreen);
     }
 }
