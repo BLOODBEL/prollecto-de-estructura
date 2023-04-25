@@ -381,7 +381,7 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
     public JLabel getLeftRoad1() {
         return leftRoad1;
     }
-
+    
     public void setLeftRoad1(JLabel leftRoad1) {
         this.leftRoad1 = leftRoad1;
     }
@@ -389,7 +389,7 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
     public JLabel getLeftRoad2() {
         return leftRoad2;
     }
-
+   
     public void setLeftRoad2(JLabel leftRoad2) {
         this.leftRoad2 = leftRoad2;
     }
@@ -467,7 +467,7 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
         lblSelectPiezaText.setVisible(false);
         lblGameFinishText.setVisible(false);
         paintButtonImage(btSeleccioPieza, "src/image/boton.png");
-        JListPiezas.setEnabled(false);
+        JListPiezas.setEnabled(true);
         btSeleccioPieza.setEnabled(false);
         dinero=15000;
         String dineroString;
@@ -545,7 +545,7 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
             case "Auto de alta gama":
                 ganancia = 10000;
                 break;
-            case "Maquinaria de última tecnología":
+            case "Maquinaria de ultima tecnologia":
                 ganancia = 18000;
                 break;
             default:
@@ -602,6 +602,9 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
         jScrollPane3 = new javax.swing.JScrollPane();
         txtAutosConstruidos = new javax.swing.JTextArea();
         JugadorDinero = new javax.swing.JTextField();
+        jButtonAumento1 = new javax.swing.JButton();
+        jButtonAumento2 = new javax.swing.JButton();
+        jButtonAumento3 = new javax.swing.JButton();
 
         jButton4.setText("jButton4");
 
@@ -610,7 +613,7 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
         jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(0, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 51));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         getContentPane().add(lblCharactersLeft, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 500, 120, 80));
@@ -618,15 +621,15 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
         lblGameFinishText.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         lblGameFinishText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblGameFinishText.setText("Ganador: Gerente (Jugador)");
-        getContentPane().add(lblGameFinishText, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 320, 40));
+        getContentPane().add(lblGameFinishText, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 320, 40));
 
         lblSelectPiezaText.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 1, 36)); // NOI18N
         lblSelectPiezaText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSelectPiezaText.setText("¡Crea!");
-        getContentPane().add(lblSelectPiezaText, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 340, 80));
+        getContentPane().add(lblSelectPiezaText, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 340, 80));
 
         lblSelectPie.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        getContentPane().add(lblSelectPie, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 260, 330, 70));
+        getContentPane().add(lblSelectPie, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 330, 70));
 
         lblNewGame.setFont(new java.awt.Font("Engravers MT", 1, 48)); // NOI18N
         lblNewGame.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -651,7 +654,7 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
             public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
             }
         });
-        getContentPane().add(contadorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 90, 40));
+        getContentPane().add(contadorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 90, 40));
         getContentPane().add(lblContadorBackGround, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, 90, 40));
 
         jLabel5.setFont(new java.awt.Font("Papyrus", 1, 24)); // NOI18N
@@ -670,7 +673,7 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
         });
         jScrollPane2.setViewportView(JListPiezas);
 
-        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 280, -1, 100));
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 140, -1, 130));
 
         btSeleccioPieza.setText("Seleccionar pieza");
         btSeleccioPieza.setBorderPainted(false);
@@ -682,7 +685,7 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
                 btSeleccioPiezaActionPerformed(evt);
             }
         });
-        getContentPane().add(btSeleccioPieza, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 400, -1, 30));
+        getContentPane().add(btSeleccioPieza, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 300, -1, 30));
 
         leftRoad1.setBackground(new java.awt.Color(255, 255, 255));
         leftRoad1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -696,10 +699,10 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
 
         lblBackGround.setBackground(new java.awt.Color(0, 255, 255));
         lblBackGround.setForeground(new java.awt.Color(0, 255, 255));
-        getContentPane().add(lblBackGround, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 510));
+        getContentPane().add(lblBackGround, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 740, 440));
 
         jLabel8.setFont(new java.awt.Font("Raleway", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(51, 255, 0));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 0));
         jLabel8.setText("Dinero del jugador");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, -1, -1));
 
@@ -724,7 +727,31 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
                 JugadorDineroActionPerformed(evt);
             }
         });
-        getContentPane().add(JugadorDinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 460, 130, -1));
+        getContentPane().add(JugadorDinero, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 130, -1));
+
+        jButtonAumento1.setText("Agregar espacio - 70000");
+        jButtonAumento1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAumento1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonAumento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
+
+        jButtonAumento2.setText("Agregar espacio - 80000");
+        jButtonAumento2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAumento2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonAumento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, -1, -1));
+
+        jButtonAumento3.setText("Agregar espacio - 90000");
+        jButtonAumento3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAumento3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonAumento3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 350, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -765,6 +792,49 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
         // TODO add your handling code here:
         vaciarListaPiezasSeleccionadas();
     }//GEN-LAST:event_jButtonBasureroActionPerformed
+
+    private void jButtonAumento1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAumento1ActionPerformed
+        // TODO add your handling code here:
+        int convertir;
+        
+        convertir = Integer.parseInt(JugadorDinero.getText());
+        
+        if (convertir>=70000) {
+            int nuevoPresupuesto = convertir - 70000;
+            JugadorDinero.setText(Integer.toString(nuevoPresupuesto));
+        }else{
+            txtAutosConstruidos.setText("No se pudo comprar un nuevo espacio. Dinero insuficiente.");
+        }
+        
+    }//GEN-LAST:event_jButtonAumento1ActionPerformed
+
+    private void jButtonAumento2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAumento2ActionPerformed
+        // TODO add your handling code here:
+        int convertir;
+        
+        convertir = Integer.parseInt(JugadorDinero.getText());
+        
+        if (convertir>=80000) {
+            int nuevoPresupuesto = convertir - 80000;
+            JugadorDinero.setText(Integer.toString(nuevoPresupuesto));
+        }else{
+            txtAutosConstruidos.setText("No se pudo comprar un nuevo espacio. Dinero insuficiente.");
+        }
+    }//GEN-LAST:event_jButtonAumento2ActionPerformed
+
+    private void jButtonAumento3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAumento3ActionPerformed
+        // TODO add your handling code here:
+        int convertir;
+        
+        convertir = Integer.parseInt(JugadorDinero.getText());
+        
+        if (convertir>=90000) {
+            int nuevoPresupuesto = convertir - 90000;
+            JugadorDinero.setText(Integer.toString(nuevoPresupuesto));
+        }else{
+            txtAutosConstruidos.setText("No se pudo comprar un nuevo espacio. Dinero insuficiente.");
+        }
+    }//GEN-LAST:event_jButtonAumento3ActionPerformed
     
     public static void main(String args[]) {
         
@@ -790,6 +860,7 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Inicio().setVisible(true);
+                
             }
         });
     }
@@ -854,11 +925,19 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
         });
         timer.setInitialDelay(0);
         timer.start();
+        if (minutos==1) {
+            stopTimer();
+            this.dispose();
+        }
     }
     
     
+    public void updateHitPointsBar(Taller barra, JProgressBar bar) {
+        int life = (int) Math.ceil(barra.getLife());
+        bar.setValue(life);
+    }
 
-    
+   
 public void turn() {
         if (charactersLeft == 0) {
             Partida round = new Partida(this);
@@ -937,6 +1016,9 @@ public void turn() {
     private javax.swing.JButton btSeleccioPieza;
     private javax.swing.JLabel contadorLabel;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButtonAumento1;
+    private javax.swing.JButton jButtonAumento2;
+    private javax.swing.JButton jButtonAumento3;
     private javax.swing.JButton jButtonBasurero;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;

@@ -1,21 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package JuegoFabrica;
 
-import javax.swing.JProgressBar;
-import javax.swing.JTextField;
-
+/**
+ *
+ * @author danie
+ */
+    
 public class MoveCpu extends Thread {
 
     private ListaDobleEnlazada<Road> leftPath;
     private ListaDobleEnlazada<Road> rightPath;
     private Taller player;
     private Inicio screen;
-    private JProgressBar playerHitPoints;
     private Bot logicCpu;
     private Turn turn;
 
-    MoveCpu(ListaDobleEnlazada<Road> leftRoad, ListaDobleEnlazada<Road> rightRoad, Taller player, Inicio aThis, JTextField JugadorDinero, Bot logicCpu) {
+    MoveCpu(ListaDobleEnlazada<Road> leftRoad, ListaDobleEnlazada<Road> rightRoad, Taller player, Inicio aThis, Bot logicCpu) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+}
 
     @Override
     public void run() {
@@ -30,7 +36,6 @@ public class MoveCpu extends Thread {
         if (!player.isDestroyed()) {
             if (screen.getCharactersLeft() == 0) {
                 if (logicCpu.getCharacterTotal() != 0.0 || screen.getPlayerCharactersOnBoard() != 0) {
-                    screen.moveCharacters();
                 } else {
                     screen.turn();
                 }
@@ -69,7 +74,6 @@ public class MoveCpu extends Thread {
                         logicCpu.lessRight();
                     }
 
-                    screen.updateHitPointsBar(player, playerHitPoints);
 
                     if (player.isDestroyed()) {
                         screen.stopTimer();
@@ -117,13 +121,5 @@ public class MoveCpu extends Thread {
         }
     }
 
-    public MoveCpu(ListaDobleEnlazada<Road> leftPath, ListaDobleEnlazada<Road> rightPath, Taller player, Inicio screen, JProgressBar playerHitPoints, Bot logicCpu) {
-        this.leftPath = leftPath;
-        this.rightPath = rightPath;
-        this.player = player;
-        this.screen = screen;
-        this.playerHitPoints = playerHitPoints;
-        this.logicCpu = logicCpu;
-        this.turn = new Turn(screen);
-    }
+    
 }

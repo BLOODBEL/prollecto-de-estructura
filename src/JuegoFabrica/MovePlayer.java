@@ -1,20 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package JuegoFabrica;
 
-import javax.swing.JProgressBar;
-
+/**
+ *
+ * @author danie
+ */
+    
 public class MovePlayer extends Thread {
 
     private ListaDobleEnlazada<Road> leftPath;
     private ListaDobleEnlazada<Road> rightPath;
     private Taller cpu;
     private Inicio screen;
-    private JProgressBar cpuHitPoints;
     private Bot logicCpu;
     private MoveCpu moveCpu;        
 
-    MovePlayer(ListaDobleEnlazada<Road> leftRoad, ListaDobleEnlazada<Road> rightRoad, Taller cpu, Inicio aThis, Bot logicCpu, MoveCpu moveCpu) {
+    MovePlayer(ListaDobleEnlazada<Road> leftRoad, ListaDobleEnlazada<Road> rightRoad, Taller cpu, Inicio aThis, Bot logicCpu) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+}
 
     @Override
     public void run() {
@@ -26,9 +33,7 @@ public class MovePlayer extends Thread {
             move(rightPath);
         }
 
-        if (!cpu.isDestroyed()) {
-            moveCpu.start();
-        }
+        
     }
 
     public void move(ListaDobleEnlazada<Road> path) {
@@ -49,7 +54,6 @@ public class MovePlayer extends Thread {
 
                     screen.lessCharactersOnBoard();
 
-                    screen.updateHitPointsBar(cpu, cpuHitPoints);
 
                     if (cpu.isDestroyed()) {
                         screen.stopTimer();
@@ -97,13 +101,11 @@ public class MovePlayer extends Thread {
         }
     }
 
-    public MovePlayer(ListaDobleEnlazada<Road> leftPath, ListaDobleEnlazada<Road> rightPath, Taller cpu, Inicio screen, JProgressBar cpuHitPoints, Bot logicCpu, MoveCpu moveCpu) {
+    public MovePlayer(ListaDobleEnlazada<Road> leftPath, ListaDobleEnlazada<Road> rightPath, Taller cpu, Inicio screen,  Bot logicCpu, MoveCpu moveCpu) {
         this.leftPath = leftPath;
         this.rightPath = rightPath;
         this.cpu = cpu;
         this.screen = screen;
-        this.cpuHitPoints = cpuHitPoints;
-        this.logicCpu = logicCpu;
-        this.moveCpu = moveCpu;
+
     }
 }
