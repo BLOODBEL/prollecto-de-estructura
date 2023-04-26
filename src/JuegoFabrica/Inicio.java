@@ -938,15 +938,15 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
     }
 
    
-public void turn() {
-        if (charactersLeft == 0) {
-            Partida round = new Partida(this);
-            round.start();
-            return;
-        }
-        
-        JListPiezas.setEnabled(true);
-    }
+//public void turn() {
+//        if (charactersLeft == 0) {
+//            Partida round = new Partida(this);
+//            round.start();
+//            return;
+//        }
+//        
+//        JListPiezas.setEnabled(true);
+//    }
     
     
     
