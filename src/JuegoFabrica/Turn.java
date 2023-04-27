@@ -24,7 +24,6 @@ public class Turn extends Thread {
 
         principalScreen.dontShowSelectTroops();
 
-        principalScreen.turn();
     }
 
     public Turn(Inicio principalScreen) {
