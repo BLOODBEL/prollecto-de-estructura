@@ -36,7 +36,9 @@ public class MoveCpu extends Thread {
         if (!player.isDestroyed()) {
             if (screen.getCharactersLeft() == 0) {
                 if (logicCpu.getCharacterTotal() != 0.0 || screen.getPlayerCharactersOnBoard() != 0) {
-                } 
+                } else {
+                    screen.turn();
+                }
 
             } else {
                 
