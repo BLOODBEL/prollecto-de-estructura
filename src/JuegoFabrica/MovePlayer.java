@@ -58,8 +58,6 @@ public class MovePlayer extends Thread {
                     if (cpu.isDestroyed()) {
                         screen.stopTimer();
                         screen.gameFinish("Ganador: Jugador");
-                        PlaySound playSound = new PlaySound();
-                        playSound.playSound("src/Sounds/Ganador.wav");
                         return;
                     }
 

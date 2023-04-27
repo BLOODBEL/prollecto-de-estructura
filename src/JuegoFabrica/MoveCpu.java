@@ -78,8 +78,6 @@ public class MoveCpu extends Thread {
                     if (player.isDestroyed()) {
                         screen.stopTimer();
                         screen.gameFinish("Ganador: Bot");
-                        PlaySound playSound = new PlaySound();
-                        playSound.playSound("src/Sounds/GameOver.wav");
                         return;
                     }
 

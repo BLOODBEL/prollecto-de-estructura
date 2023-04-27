@@ -10,7 +10,6 @@ public class Character {
 
     private String killSoundURL;
 
-    private PlaySound playSound = new PlaySound();
 
     public Character(CharacterType characterType) {
         this.characterType = characterType;

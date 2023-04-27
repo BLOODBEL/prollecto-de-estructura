@@ -6,7 +6,6 @@ public class Partida extends Thread {
     
     private Inicio principalScreen; 
     
-    private PlaySound playSound = new PlaySound();
 
     @Override
     public void run() {
@@ -14,7 +13,6 @@ public class Partida extends Thread {
     }
 
     public void showNewRound() {
-        playSound.playSound("src/Sounds/Ready Go.wav");                
         
         principalScreen.showNewRound();
         

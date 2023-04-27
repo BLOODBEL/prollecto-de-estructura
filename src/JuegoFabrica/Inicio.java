@@ -48,7 +48,6 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
     
     
     
-    private PlaySound playSound = new PlaySound();
 
     public JList<String> getjListPiezas() {
         return jListPiezas;
@@ -204,13 +203,7 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
         this.horasStr = horasStr;
     }
 
-    public PlaySound getPlaySound() {
-        return playSound;
-    }
-
-    public void setPlaySound(PlaySound playSound) {
-        this.playSound = playSound;
-    }
+    
 
     public JList<String> getJListPiezas() {
         return JListPiezas;
@@ -487,7 +480,6 @@ public class Inicio extends javax.swing.JFrame implements ActionListener{
         Partida round = new Partida(this);
         round.start();
         
-        playSound.playTheme("src/Sounds/Theme.wav");
 
         startTimer();
         pack();
